@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2848745786939294587}
   - component: {fileID: 30452601383860145}
   - component: {fileID: 1706202194217937715}
-  - component: {fileID: 1706202194217937712}
-  - component: {fileID: -9102995447504220490}
+  - component: {fileID: 3007162882419990166}
+  - component: {fileID: -3724446324514616625}
   m_Layer: 0
   m_Name: SmallCloudPrefab
   m_TagString: SmallCloudTag
@@ -96,7 +96,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1101733005453906574, guid: 476b47c4d1d2f490d9afd5da0678808a, type: 3}
---- !u!114 &1706202194217937712
+--- !u!114 &3007162882419990166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,10 +105,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976178683879560804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f38f6e1394a4143cfb3c1273221024ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 333355afa275e4d118e775b7dbcd19e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-9102995447504220490
+--- !u!114 &-3724446324514616625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +117,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976178683879560804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f90a7f690f0b4a9fac4c1fe542f4aac, type: 3}
+  m_Script: {fileID: 11500000, guid: ba90eb26c052a4b439b97dc8f486d68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

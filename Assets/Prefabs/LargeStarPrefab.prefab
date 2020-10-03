@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6528205989564289307}
   - component: {fileID: 9042154428561253841}
   - component: {fileID: 7691508429449132375}
-  - component: {fileID: 7691508429449132360}
-  - component: {fileID: -7083200588208785377}
+  - component: {fileID: -4408253718275157377}
+  - component: {fileID: -9087055853836910378}
   m_Layer: 0
   m_Name: LargeStarPrefab
   m_TagString: LargeStarTag
@@ -96,7 +96,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8023080413318814639, guid: 164b7bedef86e48b1af03688f7c1241d, type: 3}
---- !u!114 &7691508429449132360
+--- !u!114 &-4408253718275157377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,10 +105,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7385010566792856580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40e2c8ca200834e09b1e6a5575c61689, type: 3}
+  m_Script: {fileID: 11500000, guid: f6d8710ac7df94250b44b01880b1d361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7083200588208785377
+--- !u!114 &-9087055853836910378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +117,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7385010566792856580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f90a7f690f0b4a9fac4c1fe542f4aac, type: 3}
+  m_Script: {fileID: 11500000, guid: ba90eb26c052a4b439b97dc8f486d68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

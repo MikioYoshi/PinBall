@@ -40,7 +40,7 @@ public class FripperController : MonoBehaviour
         }
     }
 
-    public void SetAngle (float angle)
+    public void SetAngle(float angle)
     {
         JointSpring jointSpr = this.myHingeJoint.spring;
         jointSpr.targetPosition = angle;
