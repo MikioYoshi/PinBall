@@ -38,6 +38,43 @@ public class FripperController : MonoBehaviour
         {
             SetAngle(this.defaultAngle);
         }
+
+        //発展課題
+        TouchContoroll();
+
+
+    }
+
+    void TouchContoroll()
+    {
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            if (Input.touches[i].phase == TouchPhase.Began &&
+                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag")
+            {
+                SetAngle(this.flickAngle);
+            }
+            if (Input.touches[i].phase == TouchPhase.Began &&
+                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag")
+            {
+                SetAngle(this.flickAngle);
+            }
+            if (Input.touches[i].phase == TouchPhase.Ended &&
+                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag")
+            {
+                SetAngle(this.defaultAngle);
+            }
+            if (Input.touches[i].phase == TouchPhase.Ended &&
+                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag")
+            {
+                SetAngle(this.defaultAngle);
+            }
+
+
+            Debug.Log("touches[" + i + "]");
+            Debug.Log("  position.x : " + Input.touches[i].position.x);
+            Debug.Log("  phase : " + Input.touches[i].phase);
+        }
     }
 
     public void SetAngle(float angle)
