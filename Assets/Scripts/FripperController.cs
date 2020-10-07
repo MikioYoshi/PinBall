@@ -10,6 +10,8 @@ public class FripperController : MonoBehaviour
 
     private float flickAngle = -20;
 
+    int fingerId = -1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,27 +48,32 @@ public class FripperController : MonoBehaviour
     }
 
     void TouchContoroll()
-    {
+    { 
         for (int i = 0; i < Input.touchCount; i++)
         {
             if (Input.touches[i].phase == TouchPhase.Began &&
-                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag")
+                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag" && fingerId == -1)
             {
+                fingerId = Input.touches[i].fingerId;
+
                 SetAngle(this.flickAngle);
             }
             if (Input.touches[i].phase == TouchPhase.Began &&
-                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag")
+                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag" && fingerId == -1)
             {
+                fingerId = Input.touches[i].fingerId;
                 SetAngle(this.flickAngle);
             }
             if (Input.touches[i].phase == TouchPhase.Ended &&
-                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag")
+                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag" && fingerId == Input.touches[i].fingerId)
             {
+                fingerId = -1;
                 SetAngle(this.defaultAngle);
             }
             if (Input.touches[i].phase == TouchPhase.Ended &&
-                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag")
+                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag" && fingerId == Input.touches[i].fingerId)
             {
+                fingerId = -1;
                 SetAngle(this.defaultAngle);
             }
 
