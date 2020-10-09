@@ -42,12 +42,12 @@ public class FripperController : MonoBehaviour
         }
 
         //発展課題
-        TouchContoroll();
+        TouchControll();
 
 
     }
 
-    void TouchContoroll()
+    void TouchControll()
     { 
         for (int i = 0; i < Input.touchCount; i++)
         {
