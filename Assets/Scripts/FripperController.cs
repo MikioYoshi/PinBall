@@ -64,14 +64,14 @@ public class FripperController : MonoBehaviour
                 fingerId = Input.touches[i].fingerId;
                 SetAngle(this.flickAngle);
             }
-            if (Input.touches[i].phase == TouchPhase.Ended &&
-                (Input.touches[i].position.x <= Screen.width / 2) && tag == "LeftFripperTag" && fingerId == Input.touches[i].fingerId)
+
+            if ((Input.touches[i].phase == TouchPhase.Ended && tag == "LeftFripperTag" && fingerId == Input.touches[i].fingerId) || ((Input.touches[i].position.x >= Screen.width / 2) && tag == "LeftFripperTag" && fingerId == Input.touches[i].fingerId))
             {
                 fingerId = -1;
                 SetAngle(this.defaultAngle);
             }
-            if (Input.touches[i].phase == TouchPhase.Ended &&
-                (Input.touches[i].position.x >= Screen.width / 2) && tag == "RightFripperTag" && fingerId == Input.touches[i].fingerId)
+
+            if ((Input.touches[i].phase == TouchPhase.Ended && tag == "RightFripperTag" && fingerId == Input.touches[i].fingerId) || ((Input.touches[i].position.x <= Screen.width / 2) && tag == "RightFripperTag" && fingerId == Input.touches[i].fingerId))
             {
                 fingerId = -1;
                 SetAngle(this.defaultAngle);
